@@ -21,8 +21,10 @@ and pre-fill the registered company name and address — including while VIES is
 
 ## Install
 
+Easiest: Odoo Apps store — [Odoo 18](https://apps.odoo.com/apps/modules/18.0/eurovalidate_vat) · [Odoo 17](https://apps.odoo.com/apps/modules/17.0/eurovalidate_vat) (free, LGPL-3). From source:
+
 1. Copy `eurovalidate_vat` into your addons path (or add this repository to Odoo.sh).
-2. Update the apps list and install **EuroValidate VAT Validation**.
+2. Update the apps list and install **EuroValidate VAT**.
 3. Settings → General Settings → **EuroValidate**: paste the API key, keep *Autofill* on.
    Optionally enable *Block invalid numbers*.
 
