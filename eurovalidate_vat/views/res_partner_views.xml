@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 EuroValidate (https://eurovalidate.com)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html). -->
+<odoo>
+    <record id="view_partner_form_eurovalidate" model="ir.ui.view">
+        <field name="name">res.partner.form.eurovalidate</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Button next to the VAT field -->
+            <xpath expr="//field[@name='vat']" position="after">
+                <button name="action_ev_validate" type="object" string="Validate with EuroValidate"
+                        class="btn btn-link p-0" icon="fa-check-circle"
+                        invisible="not vat"/>
+            </xpath>
+            <!-- Collapsible evidence group under the main sheet -->
+            <xpath expr="//notebook" position="inside">
+                <page string="EuroValidate" name="eurovalidate" invisible="not vat">
+                    <group>
+                        <group string="Validation">
+                            <field name="ev_status"/>
+                            <field name="ev_confidence"/>
+                            <field name="ev_last_verified"/>
+                            <field name="ev_source"/>
+                            <field name="ev_request_id"/>
+                        </group>
+                        <group string="Registered details">
+                            <field name="ev_company_name"/>
+                            <field name="ev_company_address"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_tree_eurovalidate" model="ir.ui.view">
+        <field name="name">res.partner.list.eurovalidate</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="ev_status" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

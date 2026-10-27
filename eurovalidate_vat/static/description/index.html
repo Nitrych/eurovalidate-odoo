@@ -1,0 +1,84 @@
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2 class="oe_slogan">EuroValidate VAT Validation</h2>
+      <h3 class="oe_slogan">Validate VAT numbers and fill in name &amp; address &mdash; even when VIES is down</h3>
+    </div>
+    <div class="oe_span12">
+      <p class="oe_mt32">
+        Odoo's built-in check only colours the VAT field green or red &mdash; and when VIES times out it
+        silently falls back to a checksum. This module sends the number to the
+        <a href="https://eurovalidate.com/odoo-vat-validation?utm_source=odoo&amp;utm_medium=appstore&amp;utm_campaign=description">EuroValidate API</a>,
+        which answers from a 24-hour cache with a confidence flag when the national register is unavailable,
+        and pre-fills the registered company name and address on the partner.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container oe_dark">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2 class="oe_slogan">What you get</h2>
+    </div>
+    <div class="oe_span6">
+      <ul>
+        <li><strong>Autofill:</strong> name, street, zip, city and country from the official register &mdash; only when the field is empty.</li>
+        <li><strong>Works during outages:</strong> last known answer with <code>confidence: medium</code>, or an honest <code>unavailable</code>; never a false &ldquo;valid&rdquo;.</li>
+        <li><strong>Audit evidence:</strong> request id, source and timestamp stored on every partner.</li>
+      </ul>
+    </div>
+    <div class="oe_span6">
+      <ul>
+        <li><strong>Coverage:</strong> 27 EU states, UK (paid plans), Norway, Switzerland, Australia; format checks for CL/TR/IL/MX/CA/PH.</li>
+        <li><strong>Optional blocking</strong> of invalid numbers on save; outages and quota never block.</li>
+        <li><strong>Weekly re-validation</strong> cron (off by default).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2 class="oe_slogan">Setup in three steps</h2>
+    </div>
+    <div class="oe_span4">
+      <h3>1. Get a free key</h3>
+      <p>100 validations per month, no card: <a href="https://eurovalidate.com/v1/auth/signup?utm_source=odoo&amp;utm_medium=appstore&amp;utm_campaign=step1">eurovalidate.com</a>.</p>
+    </div>
+    <div class="oe_span4">
+      <h3>2. Paste it in Settings</h3>
+      <p>Settings &rarr; General Settings &rarr; <em>EuroValidate</em>. Keep <em>Autofill</em> on.</p>
+      <img class="oe_picture oe_screenshot" src="settings.png" alt="Settings page with the EuroValidate API key field and the autofill and block-invalid switches">
+    </div>
+    <div class="oe_span4">
+      <h3>3. Save a partner with a VAT number</h3>
+      <p>The number is validated, the name and address are filled in, the <em>EuroValidate</em> tab shows status and confidence.</p>
+      <img class="oe_picture oe_screenshot" src="partner.png" alt="Partner form showing the Validate with EuroValidate button next to the VAT field and the EuroValidate tab with status, confidence and registered address">
+    </div>
+  </div>
+</section>
+
+<section class="oe_container oe_dark">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2 class="oe_slogan">Pricing of the API</h2>
+      <p class="oe_mt32">
+        The module is free (LGPL-3). The API has a free tier &mdash; 100 requests/month &mdash; and paid plans
+        from &euro;19/month (Starter, 500,000 requests/month). Most back offices validating
+        a few hundred partners a month fit in Starter. Full pricing:
+        <a href="https://eurovalidate.com/#pricing">eurovalidate.com/#pricing</a>.
+      </p>
+      <p>
+        <strong>Requirements:</strong> Odoo 17.0 or 18.0 on Odoo.sh or on-premise (Odoo Online cannot install
+        third-party Python modules). Python package <code>requests</code>.
+      </p>
+      <p>
+        Docs: <a href="https://api.eurovalidate.com/docs">api.eurovalidate.com/docs</a> &middot;
+        Source: <a href="https://github.com/Nitrych/eurovalidate-odoo">github.com/Nitrych/eurovalidate-odoo</a> &middot;
+        Support: <a href="mailto:support@eurovalidate.com">support@eurovalidate.com</a>
+      </p>
+    </div>
+  </div>
+</section>

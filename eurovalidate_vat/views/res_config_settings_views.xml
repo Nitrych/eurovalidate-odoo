@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 EuroValidate (https://eurovalidate.com)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html). -->
+<odoo>
+    <record id="res_config_settings_view_form_eurovalidate" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.eurovalidate</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="EuroValidate" string="EuroValidate" name="eurovalidate_vat">
+                    <block title="EuroValidate VAT validation" name="eurovalidate_block">
+                        <setting string="API key" help="Validates partner VAT numbers against the official registers and fills in the registered name and address. Free key: 100 validations/month, no card.">
+                            <field name="eurovalidate_api_key" password="True"/>
+                            <div class="mt-2">
+                                <a href="https://eurovalidate.com/v1/auth/signup?utm_source=odoo&amp;utm_medium=module&amp;utm_campaign=settings"
+                                   target="_blank" class="oe_link">
+                                    <i class="fa fa-arrow-right"/> Get a free API key
+                                </a>
+                            </div>
+                        </setting>
+                        <setting string="Autofill" help="Only empty fields are filled; existing values are never overwritten.">
+                            <field name="eurovalidate_autofill"/>
+                        </setting>
+                        <setting string="Block invalid numbers" help="Refuse to save a partner whose VAT number the register reports as invalid. Register outages never block a save.">
+                            <field name="eurovalidate_block_invalid"/>
+                        </setting>
+                        <setting string="Base URL" help="Leave the default unless EuroValidate tells you otherwise." groups="base.group_no_one">
+                            <field name="eurovalidate_base_url"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
