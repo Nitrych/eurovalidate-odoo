@@ -1,7 +1,7 @@
 # Copyright 2026 EuroValidate (https://eurovalidate.com)
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
 {
-    "name": "EuroValidate VAT Validation",
+    "name": "EuroValidate VAT",
     "summary": "VAT validation with name/address autofill that keeps working when VIES is down",
     "description": """
 Validate EU and UK VAT numbers on partners through the EuroValidate API and
@@ -22,6 +22,7 @@ https://eurovalidate.com/v1/auth/signup?utm_source=odoo&utm_medium=module&utm_ca
     "category": "Accounting",
     "license": "LGPL-3",
     "author": "EuroValidate",
+    "support": "support@eurovalidate.com",
     "website": "https://eurovalidate.com/odoo-vat-validation",
     "depends": ["base", "base_vat", "base_setup"],
     "external_dependencies": {"python": ["requests"]},

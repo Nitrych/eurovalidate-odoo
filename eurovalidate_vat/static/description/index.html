@@ -8,7 +8,7 @@
       <p class="oe_mt32">
         Odoo's built-in check only colours the VAT field green or red &mdash; and when VIES times out it
         silently falls back to a checksum. This module sends the number to the
-        <a href="https://eurovalidate.com/odoo-vat-validation?utm_source=odoo&amp;utm_medium=appstore&amp;utm_campaign=description">EuroValidate API</a>,
+        EuroValidate API (<code>https://eurovalidate.com/odoo-vat-validation?utm_source=odoo&amp;utm_medium=appstore&amp;utm_campaign=description</code>),
         which answers from a 24-hour cache with a confidence flag when the national register is unavailable,
         and pre-fills the registered company name and address on the partner.
       </p>
@@ -45,7 +45,7 @@
     </div>
     <div class="oe_span4">
       <h3>1. Get a free key</h3>
-      <p>100 validations per month, no card: <a href="https://eurovalidate.com/v1/auth/signup?utm_source=odoo&amp;utm_medium=appstore&amp;utm_campaign=step1">eurovalidate.com</a>.</p>
+      <p>100 validations per month, no card: eurovalidate.com (<code>https://eurovalidate.com/v1/auth/signup?utm_source=odoo&amp;utm_medium=appstore&amp;utm_campaign=step1</code>).</p>
     </div>
     <div class="oe_span4">
       <h3>2. Paste it in Settings</h3>
@@ -68,15 +68,15 @@
         The module is free (LGPL-3). The API has a free tier &mdash; 100 requests/month &mdash; and paid plans
         from &euro;19/month (Starter, 500,000 requests/month). Most back offices validating
         a few hundred partners a month fit in Starter. Full pricing:
-        <a href="https://eurovalidate.com/#pricing">eurovalidate.com/#pricing</a>.
+        eurovalidate.com/#pricing (<code>https://eurovalidate.com/#pricing</code>).
       </p>
       <p>
         <strong>Requirements:</strong> Odoo 17.0 or 18.0 on Odoo.sh or on-premise (Odoo Online cannot install
         third-party Python modules). Python package <code>requests</code>.
       </p>
       <p>
-        Docs: <a href="https://api.eurovalidate.com/docs">api.eurovalidate.com/docs</a> &middot;
-        Source: <a href="https://github.com/Nitrych/eurovalidate-odoo">github.com/Nitrych/eurovalidate-odoo</a> &middot;
+        Docs: api.eurovalidate.com/docs (<code>https://api.eurovalidate.com/docs</code>) &middot;
+        Source: github.com/Nitrych/eurovalidate-odoo (<code>https://github.com/Nitrych/eurovalidate-odoo</code>) &middot;
         Support: <a href="mailto:support@eurovalidate.com">support@eurovalidate.com</a>
       </p>
     </div>
