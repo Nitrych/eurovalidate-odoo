@@ -31,7 +31,7 @@ https://eurovalidate.com/v1/auth/signup?utm_source=odoo&utm_medium=module&utm_ca
         "views/res_partner_views.xml",
         "data/ir_cron.xml",
     ],
-    "images": ["static/description/banner.png"],
+    "images": ["static/description/banner.gif", "static/description/banner.png"],
     "installable": True,
     "application": False,
     "auto_install": False,
