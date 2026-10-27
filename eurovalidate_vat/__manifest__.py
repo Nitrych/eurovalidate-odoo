@@ -18,7 +18,7 @@ Unlike the built-in ``base_vat`` check, this module:
 A free API key (100 validations/month, no card) is enough to try it:
 https://eurovalidate.com/v1/auth/signup?utm_source=odoo&utm_medium=module&utm_campaign=manifest
 """,
-    "version": "18.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Accounting",
     "license": "LGPL-3",
     "author": "EuroValidate",
